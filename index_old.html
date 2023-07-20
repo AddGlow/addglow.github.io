@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Within our "head" we store the metadata for our website -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="StyleSheet/StyleDemo.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Add Glow Beauty</title> 
+
+        <!--=== BOOTSTRAP AND SCRIPT IMPORTS ===-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+        <!--=== FONT IMPORTS ===-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Enriqueta&family=Playfair+Display&family=Raleway:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    
+      </head>
+
+<!-- In the "body" part of this HTML, we write all the content we want visible on the page itself. -->
+    <body>
+        <!-- Main page heading -->
+
+  <scrollbar>
+    
+    <div id="navbar" class="sticky">
+      <a href="#default" id="logo">CompanyLogo</a>
+      <div id="navbar-right">
+        <a class="active" href="index.html">Home</a>
+        <a href="pages/bookings.html">Bookings</a>
+        <a href="pages/contact.html">Contact</a>
+        <a href="pages/about.html">About</a>
+      </div>
+    </div>
+
+  </scrollbar>
+
+    <section class="header">
+     
+        <div class="two alt-two">
+            <h1>Add Glow
+              <span>Your Beauty Needs Satisfied</span>
+            </h1>
+          </div>
+
+        <a class="button-top" id="button-top" href="pages/bookings.html">Book Now</a>
+    </section>
+              
+
+
+
+    
+    <div class="footer-dark">
+      <footer>
+          <div class="footer-container">
+              <div class="footer-row">
+                  <div class="foot-col1">
+                      <h3>Services</h3>
+                      <ul>
+                          <li><a href="#">Bookings</a></li>
+                          <li><a href="#">Pricing</a></li>
+                          <li><a href="#">Location</a></li>
+                      </ul>
+                  </div>
+                  <div class="foot-col2">
+                      <h3>About</h3>
+                      <ul>
+                          <li><a href="#">Our Work</a></li>
+                          <li><a href="#">The Team</a></li>
+                          <li><a href="#">Careers</a></li>
+                      </ul>
+                  </div>
+                  <div class="foot-col3">
+                      <h3>Add Glow</h3>
+                      <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                  </div>
+              </div>
+              
+              <div class="col item social icons-mid"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+              <p class="copyright">Add Glow Ltd. © 2022</p>
+          </div>
+      </footer>
+  </div>
+  
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+            <script>
+                $(function(){
+                $('.carousel-item').eq(0).addClass('active');
+                var total = $('.carousel-item').length;
+                var current = 0;
+                $('#moveRight').on('click', function(){
+                    var next=current;
+                    current= current+1;
+                    setSlide(next, current);
+                });
+                $('#moveLeft').on('click', function(){
+                    var prev=current;
+                    current = current- 1;
+                    setSlide(prev, current);
+                });
+                function setSlide(prev, next){
+                    var slide= current;
+                    if(next>total-1){
+                    slide=0;
+                    current=0;
+                    }
+                    if(next<0){
+                    slide=total - 1;
+                    current=total - 1;
+                    }
+                        $('.carousel-item').eq(prev).removeClass('active');
+                        $('.carousel-item').eq(slide).addClass('active');
+                    setTimeout(function(){
+
+                    },800);
+                    
+
+                    
+                    console.log('current '+current);
+                    console.log('prev '+prev);
+                }
+                });
+       </script>
+
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>
+
+    </body>
+
+
+</html>
+
