@@ -18,7 +18,9 @@
         /* Add your CSS styles here */
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: "Raleway", sans-serif;
+            font-size: larger;
+            font-weight: 600;
             background-color: #2e012d; 
             color: white;
         }
@@ -250,24 +252,76 @@
             color: black; /* Set the font color to black */
         }
         .section-title {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 30px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            font-family: "Playfair Display", serif;
+            font-weight: 300;
+            font-size: 34px;
         }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .service {
-            display: flex;
-            align-items: center;
-        }
-        .service img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+
+        /* New styles for the Services Section */
+        
+        /* New styles for the Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.service-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-info h3 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.service-text ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Align the list items to the left */
+}
+
+.service-text li {
+    margin-bottom: 8px;
+}
+
+.left-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.right-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+        /* New styles for the Services Section */
+
+
         .testimonials {
             margin-top: 30px;
         }
@@ -313,17 +367,136 @@
         <p class="subtitle">YOUR BEAUTY NEEDS SATISFIED</p>
             -->
         <!-- Services Section -->
-        <div class="section" id="services">
-            <h2 class="section-title">Services</h2>
-            <div class="services">
-                <!-- Service 1 -->
-                <div class="service">
-                    <img src="#" alt="Service 1">
-                    <p>Service 1 Name</p>
+<!-- Services Section -->
+<!-- Services Section -->
+<div class="section" id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services">
+        <div class="left-column">
+            <!-- Service 1: Threading & Waxing -->
+            <div class="service">
+                <div class="service-image">
+                    <img src="images\threadingService.png" alt="Service 1">
                 </div>
-                <!-- Add more services here -->
+                <div class="service-info">
+                    <h3>Threading</h3>
+                </div>
+            </div>
+            <!-- Service 1 Bullet Point Text -->
+            <div class="service-text">
+                <ul>
+                    <li>Eyebrows - £6</li>
+                    <li>Men's Eyebrows - £7</li>
+                    <li>Upper Lip - £4</li>
+                    <li>Lower Lip - £2</li>
+                    <li>Forehead - £3</li>
+                    <li>Chin - £4</li>
+                    <li>Neck - £5</li>
+                    <li>Side Face - £6</li>
+                    <li>Full Face - £20</li>
+                </ul>
+            </div>
+            <!-- Service 1.5: Waxing -->
+            <div class="service">
+                <div class="service-image">
+                    <img src="images\waxingService.png" alt="Service 1.5">
+                </div>
+                <div class="service-info">
+                    <h3>Waxing</h3>
+                </div>
+            </div>
+            <!-- Service 1.5 Bullet Point Text -->
+            <div class="service-text">
+                <ul>
+                    <li>£2 extra for all of the Threading treatments above</li>
+                </ul>
+            </div>
+            <!-- Service 2: Tint -->
+            <div class="service">
+                <div class="service-image">
+                    <img src="images\tintingService.png" alt="Service 2">
+                </div>
+                <div class="service-info">
+                    <h3>Tint</h3>
+                </div>
+            </div>
+            <!-- Service 2 Bullet Point Text -->
+            <div class="service-text">
+                <ul>
+                    <li>Eyebrow - £7</li>
+                    <li>Eyelashes - £15</li>
+                    <li>Eyebrow & Eyelashes - £20</li>
+                </ul>
             </div>
         </div>
+        <div class="right-column">
+            <!-- Service 3: HD Eyebrow -->
+            <div class="service">
+                <div class="service-image">
+                    <img src="images\hdeyebrowService.png" alt="Service 3">
+                </div>
+                <div class="service-info">
+                    <h3>HD Eyebrow</h3>
+                </div>
+            </div>
+            <!-- Service 3 Bullet Point Text -->
+            <div class="service-text">
+                <ul>
+                    <li>£25</li>
+                    <li>First time requires a patch test</li>
+                </ul>
+            </div>
+            <!-- Service 4: Henna -->
+            <div class="service">
+                <div class="service-image">
+                    <img src="images\hennaService.png" alt="Service 4">
+                </div>
+                <div class="service-info">
+                    <h3>Henna</h3>
+                </div>
+            </div>
+            <!-- Service 4 Bullet Point Text -->
+            <div class="service-text">
+                <ul>
+                    <li>From £5</li>
+                    <li>First time requires a 24-hour patch test</li>
+                </ul>
+            </div>
+            <!-- Service 5: Eyelash Extensions -->
+            <div class="service">
+                <div class="service-image">
+                    <img src="images\extensionService.png" alt="Service 5">
+                </div>
+                <div class="service-info">
+                    <h3>Eyelash Extensions</h3>
+                </div>
+            </div>
+            <!-- Service 5 Bullet Point Text -->
+            <div class="service-text">
+                <ul>
+                    <li>From £25</li>
+                </ul>
+            </div>
+            <!-- Service 6: False Eyelashes -->
+            <div class="service">
+                <div class="service-image">
+                    <img src="images\falseeyelashService.png" alt="Service 6">
+                </div>
+                <div class="service-info">
+                    <h3>False Eyelashes</h3>
+                </div>
+            </div>
+            <!-- Service 6 Bullet Point Text -->
+            <div class="service-text">
+                <ul>
+                    <li>From £7</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
         <!-- Find Us Section -->
         <div class="section" id="findus">
