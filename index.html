@@ -229,22 +229,47 @@
         font-size:13px;
         margin-bottom:0;
         }
+        @media (max-width: 768px) {
+            .footer-row {
+                display: none; /* Hide all footer contents */
+            }
 
-        /*
-        .title {
-            text-align: center;
-            font-weight: 300;
-            font-size: 4em;
-            margin-top: 30px;
+            /* Display the social icons in a row at the center */
+            .col.item.social.icons-mid {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
         }
-        .subtitle {
-            text-align: center;
-            font-size: 1.5em;
-            font-weight: 500;
+
+        .findus-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
         }
-        */
+
+        .location-info {
+            text-align: left;
+        }
+
+        .google-map {
+            text-align: center;
+        }
+
+        /* Media query for smaller screens (adjust max-width as needed) */
+        @media (max-width: 768px) {
+            .findus-content {
+                grid-template-columns: 1fr; /* Single column layout on smaller screens */
+            }
+
+            .google-map {
+                order: 2; /* Change the order to display Google Maps below the location info */
+            }
+        }
+
         .section {
             background-color: white;
+            position: relative;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             padding: 20px;
@@ -253,19 +278,31 @@
         }
         .section-title {
             font-size: 30px;
+            position: relative;
             margin-bottom: 30px;
             margin-top: 10px;
             font-family: "Playfair Display", serif;
             font-weight: 300;
             font-size: 34px;
         }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -8px; /* Adjust the spacing below the line as needed */
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #ccc; /* Light grey color */
+        }
 
         /* New styles for the Services Section */
         
         /* New styles for the Services Section */
+/* New styles for the Services Section */
 .services {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -273,7 +310,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .service-image {
@@ -292,7 +329,7 @@
 
 .service-info h3 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -318,6 +355,13 @@
     gap: 20px;
 }
 
+/* Media query for smaller screens (adjust max-width as needed) */
+@media (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
 
         /* New styles for the Services Section */
 
@@ -325,11 +369,11 @@
         .testimonials {
             margin-top: 30px;
         }
-        .testimonial {
+        /* .testimonial {
             margin: 20px 0;
-            border-top: 2px solid #65035e; /* Royal Purple */
+            border-top: 2px solid #65035e; Royal Purple
             padding-top: 20px;
-        }
+        } */
         .rating {
             display: flex;
             align-items: center;
@@ -443,7 +487,7 @@
             <div class="service-text">
                 <ul>
                     <li>£25</li>
-                    <li>First time requires a patch test</li>
+                    <li><i>First time requires a patch test</i></li>
                 </ul>
             </div>
             <!-- Service 4: Henna -->
@@ -459,7 +503,7 @@
             <div class="service-text">
                 <ul>
                     <li>From £5</li>
-                    <li>First time requires a 24-hour patch test</li>
+                    <li><i>First time requires a 24-hour patch test</i></li>
                 </ul>
             </div>
             <!-- Service 5: Eyelash Extensions -->
@@ -499,12 +543,27 @@
 
 
         <!-- Find Us Section -->
+        <!-- Find Us Section -->
         <div class="section" id="findus">
-            <h2 class="section-title">Find Us</h2>
-            <div>
-                <p>Location of the Beauty Parlour</p>
-                <!-- Replace the iframe below with the Google Maps embed code for your location -->
-                <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=108%20Elwick%20Rd,%20Ashford%20TN23%201YA+(Add%20Glow%20Ltd.)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Find Population on Map</a></iframe></div>
+            <h2 class="section-title">Where To Find Us</h2>
+            <div class="findus-content">
+                <div class="google-map">
+                    <!-- Replace the iframe below with the Google Maps embed code for your location -->
+                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=108%20Elwick%20Rd,%20Ashford%20TN23%201YA+(Add%20Glow%20Ltd.)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Find Population on Map</a></iframe></div>
+                </div>
+                <div class="location-info">
+                    <h3>Location:</h3>
+                    <p>County Square</p>
+                    <p>Opposite Waterstones, next to Burger King</p>
+                    <p>108 Elwick Rd,</p>
+                    <p>Ashford TN23 1YA</p>
+                    <p><br> </p>
+                    <p> <br></p>
+                    <h3>Opening Times:</h3>
+                    <p>Monday-Saturday 9am-5:30pm</p>
+                    <p>Sunday: Closed</p>
+                    <!-- Add any additional location and opening times details here -->
+                </div>
             </div>
         </div>
 
